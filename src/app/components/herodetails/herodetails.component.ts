@@ -20,11 +20,13 @@ export class HerodetailsComponent implements OnInit {
     private location: Location
   ) {}
 
-  ngOnInit() {
-    console.log(this.route);
-  }
+  ngOnInit() {}
 
   onSubmit() {
     this.heroService.selectedHero.value.name = this.heroName;
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }
