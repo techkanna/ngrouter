@@ -1,3 +1,15 @@
 <div class="app">
-  <app-dashboard></app-dashboard>
+  <header>
+    <h2 style="margin-bottom: 1rem;">Tour of heros</h2>
+    <nav>
+      <ul>
+        <li><a class="active" routerLink="/">Dashboard</a></li>
+        <li><a routerLink="/heros">Heros</a></li>
+      </ul>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
+  <!-- <app-dashboard></app-dashboard> -->
+  <!-- <app-heros></app-heros> -->
+  <!-- <app-herodetails></app-herodetails> -->
 </div>

@@ -1,0 +1,27 @@
+.dashboard {
+  text-align: center;
+}
+.dashboard h2 {
+  margin-bottom: 2rem;
+}
+.dashboard ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  height: 10rem;
+}
+
+.dashboard ul li {
+  background-color: rgba(5, 45, 71, 0.829);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dashboard ul li p {
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.herodetails {
+  font-size: 1.5rem;
+}
+a.btn {
+  display: inline-block;
+  background-color: rgba(228, 228, 228, 0.623);
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  color: #444;
+  margin-top: 1rem;
+}

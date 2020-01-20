@@ -1,0 +1,35 @@
+.heros ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.heros ul li {
+  margin-top: 0.7rem;
+}
+.heros ul li p {
+  background-color: rgba(228, 228, 228, 0.623);
+  border-radius: 0.2rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.heros ul li p:hover {
+  background-color: rgba(8, 87, 139, 0.753);
+  color: #fff;
+}
+
+.heros ul li p span {
+  background-color: rgba(8, 57, 90, 0.753);
+  color: #fff;
+  padding: 0.5rem;
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+
+a.btn {
+  display: inline-block;
+  background-color: rgba(228, 228, 228, 0.623);
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  color: #444;
+}

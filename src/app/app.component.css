@@ -1,0 +1,26 @@
+.app {
+  padding: 1rem;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+header nav ul li {
+  padding: 0 1rem;
+}
+
+header nav ul li a {
+  padding: 0.3rem 1rem;
+  display: inline-block;
+  cursor: pointer;
+  background-color: rgba(200, 192, 192, 0.658);
+  color: #444444;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header nav ul li a.active {
+  color: rgb(14, 139, 197);
+}
