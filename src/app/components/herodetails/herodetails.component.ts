@@ -3,27 +3,28 @@ import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
 import { HeroserviceService } from "../../services/heroservice.service";
+import { Hero } from "src/app/modals/Hero";
 @Component({
   selector: "app-herodetails",
   templateUrl: "./herodetails.component.html",
   styleUrls: ["./herodetails.component.css"]
 })
 export class HerodetailsComponent implements OnInit {
-  public id = +this.route.snapshot.params.id;
-  private selectedHero: any = this.heroService.heros.filter(
-    hero => hero.id === this.id
-  );
-  public heroName: string = this.selectedHero[0].name;
+  private hero: Hero;
+
   constructor(
     private heroService: HeroserviceService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getHero();
+  }
 
-  onSubmit() {
-    this.heroService.selectedHero.value.name = this.heroName;
+  getHero(): void {
+    const id = +this.route.snapshot.params.id;
+    this.heroService.getHero(id).subscribe(hero => (this.hero = hero));
   }
 
   goBack(): void {

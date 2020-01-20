@@ -25,11 +25,3 @@
   display: inline-block;
   margin-right: 0.4rem;
 }
-
-a.btn {
-  display: inline-block;
-  background-color: rgba(228, 228, 228, 0.623);
-  text-decoration: none;
-  padding: 0.4rem 1rem;
-  color: #444;
-}

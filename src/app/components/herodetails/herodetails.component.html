@@ -1,16 +1,13 @@
-<div class="herodetails">
-  <h2>{{ selectedHero[0].name | titlecase }} Details!</h2>
-  <p>id: {{ selectedHero[0].id }}</p>
-  <!-- {{ selectedHero[0] | json }} -->
-  <form (ngSubmit)="onSubmit()">
-    Name:
-    <input
-      type="text"
-      name="heroName"
-      [(ngModel)]="heroName"
-      value="{{ selectedHero[0].name }}"
-    />
-  </form>
+<div *ngIf="hero" class="herodetails">
+  <h2>{{ hero.name | titlecase }} Details!</h2>
+  <p>id: {{ hero.id }}</p>
+
+  <div>
+    <label>
+      Name:
+      <input type="text" [(ngModel)]="hero.name" />
+    </label>
+  </div>
 
   <button (click)="goBack()" class="btn">Back</button>
 </div>

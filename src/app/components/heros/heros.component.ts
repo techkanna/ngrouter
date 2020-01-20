@@ -7,13 +7,15 @@ import { Hero } from "../../modals/Hero";
   styleUrls: ["./heros.component.css"]
 })
 export class HerosComponent implements OnInit {
-  private heros: Hero[] = this.heroService.heros;
-  private selectedHero: any = this.heroService.selectedHero;
+  private heros: Hero[];
+  // private selectedHero: any = this.heroService.selectedHero;
   constructor(private heroService: HeroserviceService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getHeros();
+  }
 
-  setMyHero(hero: Hero) {
-    this.heroService.selectedHero.value = hero;
+  getHeros(): void {
+    this.heroService.getHeros().subscribe(heros => (this.heros = heros));
   }
 }
